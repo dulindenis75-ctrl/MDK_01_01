@@ -13,9 +13,9 @@ void test_1() {
 }
 
 
-long long test_2(long long a, long long b) 
+long long test_2(long long anter, long long befor) 
 {
-    return a + b;
+    return anter + befor;
 }
 
 
@@ -44,9 +44,9 @@ int main() {
     test_1();
 
 
-    long long a, b;
-    cin >> a >> b;
-    cout << test_2(a, b) << "\n";
+    long long anter, befor;
+    cin >> anter >> befor;
+    cout << test_2(anter, befor) << "\n";
 
 
     double cm;
