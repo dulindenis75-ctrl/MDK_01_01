@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdio>
 
 using std::cin;
 using std::cout;
@@ -48,7 +49,7 @@ using std::string;
 
 //Task_2
 
-int main() {
+/* int main() {
     string word;
     cin >> word;
 
@@ -80,6 +81,33 @@ int main() {
     if (res.size() > 4) res.resize(4);
     while (res.size() < 4) res += '0';
 
-    cout << res << "\n";
+    cout << res << "\n"; */
+
+
+
+// Task_3 
+
+void solve() {
+    int n;
+    if (scanf("%d", &n) != 1) return;
+
+    // n <= 20000, поэтому 20001 достаточно
+    int b[20001] = {0};
+
+    for (int k = 1; k <= n; ++k) {
+        int seat;
+        scanf("%d", &seat);
+        b[seat] = k;  // гость номер k сел на место seat
+    }
+
+    for (int i = 1; i <= n; ++i) {
+        printf("%d ", b[i]);
+    }
+}
+
+int main() {
+    solve();
+
     return 0;
 }
+
